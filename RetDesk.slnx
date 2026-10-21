@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RetDesk.Api/RetDesk.Api.csproj" />
+    <Project Path="src/RetDesk.Application/RetDesk.Application.csproj" />
+    <Project Path="src/RetDesk.Domain/RetDesk.Domain.csproj" />
+    <Project Path="src/RetDesk.Infrastructure/RetDesk.Infrastructure.csproj" />
+  </Folder>
+</Solution>

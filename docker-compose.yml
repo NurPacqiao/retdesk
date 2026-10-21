@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: retdesk-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: retdesk_user
+      POSTGRES_PASSWORD: retdesk_dev_password
+      POSTGRES_DB: retdesk_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U retdesk_user -d retdesk_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
